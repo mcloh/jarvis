@@ -1,0 +1,14 @@
+[Unit]
+Description=Jarvis Listener Service
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/jarvis_listener.py
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
